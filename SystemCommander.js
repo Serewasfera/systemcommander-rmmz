@@ -62,9 +62,9 @@
     PluginManager.registerCommand('SystemCommander', 'run', function(args) {
         executeCommand(args.cmd, (success, result) => {
             if (success) {
-                console.log(`Команда "${args.cmd}" выполнена:`, result);
+                console.log(`Command "${args.cmd}" executed:`, result);
             } else {
-                $gameMessage.add(`Ошибка: ${result.message}`);
+                $gameMessage.add(`Error: ${result.message}`);
             }
         });
     });
